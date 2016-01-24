@@ -29,7 +29,8 @@ public class Main {
         
     }
     
-    
+    // тут параметром добавить размеры таблицы! 
+    // отдельным методом можно заполнить стартовые значения
     public static JTable creatingTable(JFrame form) {
         Object[][] mat = {{1,2,3}, {4,5,6}};
         Object[] column = {"A", "B", "C"};
@@ -40,6 +41,7 @@ public class Main {
         table.setSize(300, 300);
         return table;
     }
+    
     
     
     
