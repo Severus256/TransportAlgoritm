@@ -8,10 +8,10 @@ package transportalgoritm;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
+import javax.swing.table.AbstractTableModel;
 
 /**
  *
@@ -22,23 +22,40 @@ public class Main {
     public static void main(String[] args) {
        JFrame MainForm;
        MainForm = creatingForm();
-
-        
-
-
     }
 
     // тут параметром добавить размеры таблицы! 
     // отдельным методом можно заполнить стартовые значения
     public static JTable creatingTable(JFrame form) {
+        
+        JTable table = new JTable(new AbstractTableModel() {
 
-          Object[][] mat = {{1,2,3}, {4,5,6}};
+            @Override
+            public int getRowCount() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getColumnCount() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public Object getValueAt(int rowIndex, int columnIndex) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+            
+        });
+        
+       /*   Object[][] mat = {{1,2,3}, {4,5,6}};
          Object[] column = {"A", "B", "C"};
         
          JTable table = new JTable(mat, column);
          table.setBackground(form.getBackground());
          table.setShowGrid(false);
-         table.setSize(300, 300);
+         table.setSize(300, 300);*/
+        
+         
          return table;
          
     }
